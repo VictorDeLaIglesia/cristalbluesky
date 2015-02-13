@@ -4,15 +4,13 @@
 
 #define ONE_WIRE_BUS 3
 #define RDD 0
+#define WRD 1
+#define RDA 2
+#define WRA 3
+#define TEM 4
+#define LCD 5
 
 int const BUFSIZE = 40;
-
-//const int RDD = 0;
-const int WRD = 1;
-const int RDA = 2;
-const int WRA = 3;
-const int TEM = 4;
-const int LCD = 5;
 
 // Setup a oneWire instance to communicate with any OneWire devices (not just Maxim/Dallas temperature ICs)
 OneWire oneWire(ONE_WIRE_BUS);
@@ -59,6 +57,7 @@ char * processCommand(char *  command)
 			value = atoi(command);
 			Serial.print(value);
 			Serial.print(" ");
+			pinMode(icode, OUTPUT);
 			digitalWrite(icode, value);
 			Serial.print(digitalRead(icode));
 			Serial.println();
