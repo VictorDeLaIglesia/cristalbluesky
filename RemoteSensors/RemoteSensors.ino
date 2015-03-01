@@ -1,123 +1,20 @@
-#include <SoftwareSerial.h>
-#include <DallasTemperature.h>
+#include "BTComLib.h"
 #include <OneWire.h>
+#include <DallasTemperature.h>
+#include <SoftwareSerial.h>
 
-#define ONE_WIRE_BUS 3
-#define RDD 0
-#define WRD 1
-#define RDA 2
-#define WRA 3
-#define TEM 4
-#define LCD 5
+const uint8_t Rx = 8;
+const uint8_t Tx = 9;
+const uint8_t OneWPin = 1;
 
-int const BUFSIZE = 40;
-
-// Setup a oneWire instance to communicate with any OneWire devices (not just Maxim/Dallas temperature ICs)
-OneWire oneWire(ONE_WIRE_BUS);
-
-// Pass our oneWire reference to Dallas Temperature.
-DallasTemperature sensors(&oneWire);
-
-char command[BUFSIZE];
+BTRemoteSensors BTSensors(8, 9, 1);
 
 void setup()
 {
-	Serial.begin(9600);
-	Serial.write("Conectado\n");
-	sensors.begin();
-}
-
-char * processCommand(char *  command)
-{
-	
-	char *  code = command;
-	command = strstr(command, " ");
-	command[0]=0;
-	command = &command[1];
-	int icode = atoi(code);
-	int value = 0;
-	switch (icode){
-		case RDD:
-			icode = atoi(command);
-			Serial.print("BRDD ");
-			Serial.print(icode);
-			Serial.print(" ");
-			Serial.print(digitalRead(icode));
-			Serial.println();
-		break;
-		case WRD:
-			code = command;
-			command = strstr(command, " ");
-			command[0]=0;
-			command = &command[1];
-			icode = atoi(code);
-			Serial.print("BWRD ");
-			Serial.print(icode);
-			Serial.print(" ");
-			value = atoi(command);
-			Serial.print(value);
-			Serial.print(" ");
-			pinMode(icode, OUTPUT);
-			digitalWrite(icode, value);
-			Serial.print(digitalRead(icode));
-			Serial.println();
-		break;
-		case RDA:
-			icode = atoi(command);
-			Serial.print("BRDA ");
-			Serial.print(icode);
-			Serial.print(" ");
-			Serial.print(analogRead(icode));
-			Serial.println();
-		break;
-		case WRA:
-			code = command;
-			command = strstr(command, " ");
-			command[0]=0;
-			command = &command[1];
-			icode = atoi(code);
-			Serial.print("BWRA ");
-			Serial.print(icode);
-			Serial.print(" ");
-			value = atoi(command);
-			Serial.print(value);
-			Serial.print(" ");
-			analogWrite(icode, value);
-			Serial.print(analogRead(icode));
-			Serial.println();
-		break;
-		case TEM:
-			Serial.print("BTEM ");
-			sensors.requestTemperatures();
-			Serial.print(sensors.getTempCByIndex(0));
-			Serial.print(" ");
-			Serial.print(sensors.getDeviceCount());
-			Serial.println();
-		break;
-		case LCD:
-			Serial.print("BLCD ");
-		break;
-	}
-	return command;
+	BTSensors.begin();
 }
 
 void loop()
 {
-	int index = 0;
-	while (Serial.available() > 0) {
-		index = 0;
-		while ((Serial.available()> 0) && (index < BUFSIZE))  {
-			char inByte = Serial.read();
-			if (inByte == 10 || inByte == 13 || inByte == 244){
-				command[index]= 0; 
-				if (strlen(command) >= 1)
-					processCommand(command);
-				index = 0;
-			}
-			else {
-				command[index]=inByte;
-				index++;
-			}
-		}
-	}
+	BTSensors.loop();
 }

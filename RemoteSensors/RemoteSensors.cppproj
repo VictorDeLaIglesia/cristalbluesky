@@ -5,7 +5,7 @@
     <ProjectVersion>6.2</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
     <ProjectGuid>{07b459b4-8d76-4638-bc6d-a459ba2d616b}</ProjectGuid>
-    <avrdevice>atmega32u4</avrdevice>
+    <avrdevice>atmega168</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
     <Language>CPP</Language>
@@ -52,12 +52,7 @@
   <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcc.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>__AVR_ATmega32u4__</Value>
-      <Value>__AVR_ATmega32U4__</Value>
-      <Value>USB_VID=0x2341</Value>
-      <Value>USB_PID=0x8036</Value>
-      <Value>USB_MANUFACTURER=</Value>
-      <Value>USB_PRODUCT="\"Arduino Leonardo\""</Value>
+      <Value>__AVR_ATmega168__</Value>
       <Value>ARDUINO=158</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
@@ -66,7 +61,6 @@
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value></Value>
       <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
       <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/</Value>
       <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/avr/</Value>
@@ -77,12 +71,12 @@
       <Value>C:/ArduinoIDE/arduino-1.5.8/libraries</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature/utility</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial/utility</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial</Value>
+      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire</Value>
       <Value>../../RemoteSensors</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/leonardo</Value>
+      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/standard</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/cores/arduino</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
@@ -95,12 +89,7 @@
   <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcccpp.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>__AVR_ATmega32u4__</Value>
-      <Value>__AVR_ATmega32U4__</Value>
-      <Value>USB_VID=0x2341</Value>
-      <Value>USB_PID=0x8036</Value>
-      <Value>USB_MANUFACTURER=</Value>
-      <Value>USB_PRODUCT="\"Arduino Leonardo\""</Value>
+      <Value>__AVR_ATmega168__</Value>
       <Value>ARDUINO=158</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
@@ -109,7 +98,6 @@
   </avrgcccpp.compiler.symbols.DefSymbols>
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
-      <Value></Value>
       <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
       <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/</Value>
       <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/avr/</Value>
@@ -120,12 +108,12 @@
       <Value>C:/ArduinoIDE/arduino-1.5.8/libraries</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature/utility</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial/utility</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial</Value>
+      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire</Value>
       <Value>../../RemoteSensors</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/leonardo</Value>
+      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/standard</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/cores/arduino</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
@@ -137,10 +125,10 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/cores/arduino;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/leonardo;../../RemoteSensors;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire;C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature;C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature/utility;C:/ArduinoIDE/arduino-1.5.8/libraries;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/kotzukaru/Documents/Arduino/libraries;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/avr/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/cores/arduino;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/leonardo;../../RemoteSensors;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire;C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature;C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature/utility;C:/ArduinoIDE/arduino-1.5.8/libraries;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/kotzukaru/Documents/Arduino/libraries;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/avr/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/Wire;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/Wire/utility;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/standard;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
-      <VisualMicroSettings xmlns="">
-        <arduino.upload.port>COM10</arduino.upload.port>
+      <VisualMicroSettings>
+        <arduino.upload.port>COM12</arduino.upload.port>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
@@ -156,12 +144,7 @@
   <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcc.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>__AVR_ATmega32u4__</Value>
-      <Value>__AVR_ATmega32U4__</Value>
-      <Value>USB_VID=0x2341</Value>
-      <Value>USB_PID=0x8036</Value>
-      <Value>USB_MANUFACTURER=</Value>
-      <Value>USB_PRODUCT="\"Arduino Leonardo\""</Value>
+      <Value>__AVR_ATmega168__</Value>
       <Value>ARDUINO=158</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
@@ -170,7 +153,6 @@
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value></Value>
       <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
       <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/</Value>
       <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/avr/</Value>
@@ -181,12 +163,12 @@
       <Value>C:/ArduinoIDE/arduino-1.5.8/libraries</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature/utility</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial/utility</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial</Value>
+      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire</Value>
       <Value>../../RemoteSensors</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/leonardo</Value>
+      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/standard</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/cores/arduino</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
@@ -199,12 +181,7 @@
   <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcccpp.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>__AVR_ATmega32u4__</Value>
-      <Value>__AVR_ATmega32U4__</Value>
-      <Value>USB_VID=0x2341</Value>
-      <Value>USB_PID=0x8036</Value>
-      <Value>USB_MANUFACTURER=</Value>
-      <Value>USB_PRODUCT="\"Arduino Leonardo\""</Value>
+      <Value>__AVR_ATmega168__</Value>
       <Value>ARDUINO=158</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
@@ -213,7 +190,6 @@
   </avrgcccpp.compiler.symbols.DefSymbols>
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
-      <Value></Value>
       <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
       <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/</Value>
       <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/avr/</Value>
@@ -224,12 +200,12 @@
       <Value>C:/ArduinoIDE/arduino-1.5.8/libraries</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature/utility</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial/utility</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial</Value>
+      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire</Value>
       <Value>../../RemoteSensors</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/leonardo</Value>
+      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/standard</Value>
       <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/cores/arduino</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
@@ -241,10 +217,10 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/cores/arduino;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/leonardo;../../RemoteSensors;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire;C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature;C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature/utility;C:/ArduinoIDE/arduino-1.5.8/libraries;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/kotzukaru/Documents/Arduino/libraries;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/avr/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/cores/arduino;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/leonardo;../../RemoteSensors;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire;C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature;C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature/utility;C:/ArduinoIDE/arduino-1.5.8/libraries;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/kotzukaru/Documents/Arduino/libraries;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/avr/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/Wire;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/Wire/utility;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/standard;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
-      <VisualMicroSettings xmlns="">
-        <arduino.upload.port>COM10</arduino.upload.port>
+      <VisualMicroSettings>
+        <arduino.upload.port>COM12</arduino.upload.port>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
@@ -258,9 +234,13 @@
     <Folder Include="src\sketch-api-readonly\" />
     <Folder Include="src\sketch-api-readonly\core\" />
     <Folder Include="src\sketch-api-readonly\libraries\" />
+    <Folder Include="src\sketch-api-readonly\libraries\Firmata\" />
+    <Folder Include="src\sketch-api-readonly\libraries\Firmata\src\" />
     <Folder Include="src\sketch-api-readonly\libraries\OneWire\" />
     <Folder Include="src\sketch-api-readonly\libraries\SoftwareSerial\" />
     <Folder Include="src\sketch-api-readonly\libraries\Temperature\" />
+    <Folder Include="src\sketch-api-readonly\libraries\Wire\" />
+    <Folder Include="src\sketch-api-readonly\libraries\Wire\utility\" />
     <Folder Include="src\sketch-api-readonly\variants\" />
     <Folder Include="src\sketch-api-readonly\variants\leonardo\" />
     <Folder Include="Visual Micro\" />
@@ -461,6 +441,40 @@
     <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\libraries\Temperature\DallasTemperature.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\libraries\Temperature\DallasTemperature.h</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.5.8\hardware\arduino\avr\libraries\Wire\utility\twi.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Wire\utility\twi.c</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.5.8\hardware\arduino\avr\libraries\Wire\utility\twi.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Wire\utility\twi.h</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.5.8\hardware\arduino\avr\libraries\Wire\Wire.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Wire\Wire.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.5.8\hardware\arduino\avr\libraries\Wire\Wire.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Wire\Wire.h</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.5.8\libraries\Firmata\src\Boards.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Firmata\src\Boards.h</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.5.8\libraries\Firmata\src\Firmata.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Firmata\src\Firmata.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.5.8\libraries\Firmata\src\Firmata.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Firmata\src\Firmata.h</Link>
+    </Compile>
+    <Compile Include="BTComLib.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BTComLib.h">
+      <SubType>compile</SubType>
     </Compile>
     <Compile Include="Visual Micro\.RemoteSensors.vsarduino.h">
       <SubType>compile</SubType>
