@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "RemoteSensors", "RemoteSensors\RemoteSensors.cppproj", "{07B459B4-8D76-4638-BC6D-A459BA2D616B}"
+EndProject
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "RemoteSensorManager", "RemoteSensorManager\RemoteSensorManager.cppproj", "{6FCC8C11-094C-4E8D-821D-90D9DF242911}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|AVR = Debug|AVR
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|ARM = Release|ARM
+		Release|AVR = Release|AVR
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{07B459B4-8D76-4638-BC6D-A459BA2D616B}.Debug|ARM.ActiveCfg = Debug|AVR
+		{07B459B4-8D76-4638-BC6D-A459BA2D616B}.Debug|AVR.ActiveCfg = Debug|AVR
+		{07B459B4-8D76-4638-BC6D-A459BA2D616B}.Debug|AVR.Build.0 = Debug|AVR
+		{07B459B4-8D76-4638-BC6D-A459BA2D616B}.Debug|Mixed Platforms.ActiveCfg = Debug|AVR
+		{07B459B4-8D76-4638-BC6D-A459BA2D616B}.Debug|Mixed Platforms.Build.0 = Debug|AVR
+		{07B459B4-8D76-4638-BC6D-A459BA2D616B}.Release|ARM.ActiveCfg = Release|AVR
+		{07B459B4-8D76-4638-BC6D-A459BA2D616B}.Release|AVR.ActiveCfg = Release|AVR
+		{07B459B4-8D76-4638-BC6D-A459BA2D616B}.Release|AVR.Build.0 = Release|AVR
+		{07B459B4-8D76-4638-BC6D-A459BA2D616B}.Release|Mixed Platforms.ActiveCfg = Release|AVR
+		{07B459B4-8D76-4638-BC6D-A459BA2D616B}.Release|Mixed Platforms.Build.0 = Release|AVR
+		{6FCC8C11-094C-4E8D-821D-90D9DF242911}.Debug|ARM.ActiveCfg = Debug|ARM
+		{6FCC8C11-094C-4E8D-821D-90D9DF242911}.Debug|ARM.Build.0 = Debug|ARM
+		{6FCC8C11-094C-4E8D-821D-90D9DF242911}.Debug|AVR.ActiveCfg = Debug|ARM
+		{6FCC8C11-094C-4E8D-821D-90D9DF242911}.Debug|Mixed Platforms.ActiveCfg = Debug|ARM
+		{6FCC8C11-094C-4E8D-821D-90D9DF242911}.Debug|Mixed Platforms.Build.0 = Debug|ARM
+		{6FCC8C11-094C-4E8D-821D-90D9DF242911}.Release|ARM.ActiveCfg = Release|ARM
+		{6FCC8C11-094C-4E8D-821D-90D9DF242911}.Release|ARM.Build.0 = Release|ARM
+		{6FCC8C11-094C-4E8D-821D-90D9DF242911}.Release|AVR.ActiveCfg = Release|ARM
+		{6FCC8C11-094C-4E8D-821D-90D9DF242911}.Release|Mixed Platforms.ActiveCfg = Release|ARM
+		{6FCC8C11-094C-4E8D-821D-90D9DF242911}.Release|Mixed Platforms.Build.0 = Release|ARM
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

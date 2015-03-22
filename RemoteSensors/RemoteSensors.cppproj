@@ -5,7 +5,7 @@
     <ProjectVersion>6.2</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
     <ProjectGuid>{07b459b4-8d76-4638-bc6d-a459ba2d616b}</ProjectGuid>
-    <avrdevice>atmega168</avrdevice>
+    <avrdevice>atmega32u4</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
     <Language>CPP</Language>
@@ -52,8 +52,13 @@
   <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcc.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>__AVR_ATmega168__</Value>
-      <Value>ARDUINO=158</Value>
+      <Value>__AVR_ATmega32u4__</Value>
+      <Value>__AVR_ATmega32U4__</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x8036</Value>
+      <Value>USB_MANUFACTURER=</Value>
+      <Value>USB_PRODUCT="\"Arduino Leonardo\""</Value>
+      <Value>ARDUINO=160</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
       <Value>__AVR__</Value>
@@ -61,23 +66,28 @@
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
-      <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/</Value>
-      <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/avr/</Value>
-      <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/</Value>
+      <Value></Value>
+      <Value>c:/arduinoide/arduino-1.6.0/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
+      <Value>c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/</Value>
+      <Value>c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/include/</Value>
       <Value>C:/Users/kotzukaru/Documents/Arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature/utility</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial/utility</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/Temperature/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/Temperature</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/LiquidCrystal/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/LiquidCrystal</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/SoftwareSerial/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/SoftwareSerial</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/OneWire/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/OneWire</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/Wire/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/Wire</Value>
       <Value>../../RemoteSensors</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/standard</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/cores/arduino</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/variants/leonardo</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/cores/arduino</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -89,8 +99,13 @@
   <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcccpp.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>__AVR_ATmega168__</Value>
-      <Value>ARDUINO=158</Value>
+      <Value>__AVR_ATmega32u4__</Value>
+      <Value>__AVR_ATmega32U4__</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x8036</Value>
+      <Value>USB_MANUFACTURER=</Value>
+      <Value>USB_PRODUCT="\"Arduino Leonardo\""</Value>
+      <Value>ARDUINO=160</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
       <Value>__AVR__</Value>
@@ -98,23 +113,28 @@
   </avrgcccpp.compiler.symbols.DefSymbols>
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
-      <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/</Value>
-      <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/avr/</Value>
-      <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/</Value>
+      <Value></Value>
+      <Value>c:/arduinoide/arduino-1.6.0/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
+      <Value>c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/</Value>
+      <Value>c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/include/</Value>
       <Value>C:/Users/kotzukaru/Documents/Arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature/utility</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial/utility</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/Temperature/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/Temperature</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/LiquidCrystal/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/LiquidCrystal</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/SoftwareSerial/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/SoftwareSerial</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/OneWire/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/OneWire</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/Wire/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/Wire</Value>
       <Value>../../RemoteSensors</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/standard</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/cores/arduino</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/variants/leonardo</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/cores/arduino</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
@@ -125,10 +145,146 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/cores/arduino;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/leonardo;../../RemoteSensors;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire;C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature;C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature/utility;C:/ArduinoIDE/arduino-1.5.8/libraries;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/kotzukaru/Documents/Arduino/libraries;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/avr/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/Wire;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/Wire/utility;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/standard;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/cores/arduino;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/leonardo;../../RemoteSensors;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire;C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature;C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature/utility;C:/ArduinoIDE/arduino-1.5.8/libraries;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/kotzukaru/Documents/Arduino/libraries;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/avr/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/Wire;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/Wire/utility;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/standard;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/cores/arduino;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/variants/arduino_due_x;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/libraries;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/system/CMSIS/Device/ATMEL/;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/system/libsam;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/system/libsam/include;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/system/CMSIS/CMSIS/Include/;C:/ArduinoIDE/arduino-1.5.8/hardware/tools/g++_arm_none_eabi/arm-none-eabi/include;C:/ArduinoIDE/arduino-1.5.8/hardware/tools/g++_arm_none_eabi/arm_none_eabi/include/;C:/ArduinoIDE/arduino-1.5.8/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include;C:/ArduinoIDE/arduino-1.5.8/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include/;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/libraries/Wire;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/libraries/Wire/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/LiquidCrystal/src;C:/ArduinoIDE/arduino-1.5.8/libraries/LiquidCrystal/src/utility;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/cores/arduino;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/variants/leonardo;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/Wire;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/Wire/utility;C:/ArduinoIDE/arduino-1.6.0/libraries/OneWire;C:/ArduinoIDE/arduino-1.6.0/libraries/OneWire/utility;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/SoftwareSerial;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/SoftwareSerial/utility;C:/ArduinoIDE/arduino-1.6.0/libraries/LiquidCrystal/src;C:/ArduinoIDE/arduino-1.6.0/libraries/LiquidCrystal/src/utility;C:/ArduinoIDE/arduino-1.6.0/libraries/Temperature;C:/ArduinoIDE/arduino-1.6.0/libraries/Temperature/utility;C:/ArduinoIDE/arduino-1.6.0/libraries;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries;c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/include/;c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/include/avr/;c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/;c:/arduinoide/arduino-1.6.0/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;C:/ArduinoIDE/arduino-1.6.0/libraries/LiquidCrystal;C:/ArduinoIDE/arduino-1.6.0/libraries/LiquidCrystal/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
-        <arduino.upload.port>COM12</arduino.upload.port>
+        <arduino.upload.port>COM10</arduino.upload.port>
+        <arduino.board.name>leonardo</arduino.board.name>
+        <arduino.board.desc>Arduino Leonardo</arduino.board.desc>
+        <arduino.board.property_bag>name=Arduino Leonardo
+vid.0=0x2341
+pid.0=0x0036
+vid.1=0x2341
+pid.1=0x8036
+upload.tool=avrdude
+upload.protocol=avr109
+upload.maximum_size=28672
+upload.maximum_data_size=2560
+upload.speed=57600
+upload.disable_flushing=true
+upload.use_1200bps_touch=true
+upload.wait_for_upload_port=true
+bootloader.tool=avrdude
+bootloader.low_fuses=0xff
+bootloader.high_fuses=0xd8
+bootloader.extended_fuses=0xcb
+bootloader.file=caterina/Caterina-Leonardo.hex
+bootloader.unlock_bits=0x3F
+bootloader.lock_bits=0x2F
+build.mcu=atmega32u4
+build.f_cpu=16000000L
+build.vid=0x2341
+build.pid=0x8036
+build.usb_product="Arduino Leonardo"
+build.board=AVR_LEONARDO
+build.core=arduino
+build.variant=leonardo
+build.extra_flags={build.usb_flags}
+runtime.ide.path=C:\ArduinoIDE\arduino-1.6.0
+build.system.path=C:\ArduinoIDE\arduino-1.6.0\hardware\arduino\avr\system
+runtime.ide.version=160
+originalid=leonardo
+tools.atprogram.cmd.path=%AVRSTUDIO_EXE_PATH%\atbackend\atprogram
+tools.atprogram.cmd.setwinpath=true
+tools.atprogram.program.params.verbose=-v
+tools.atprogram.program.params.quiet=-q
+tools.atprogram.program.pattern="{cmd.path}" -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+tools.atprogram.program.xpattern="{cmd.path}" {AVRSTUDIO_BACKEND_CONNECTION} -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+version=1.6.0
+compiler.path={runtime.ide.path}/hardware/tools/avr/bin/
+compiler.c.cmd=avr-gcc
+compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -MMD
+compiler.c.elf.flags=-w -Os -Wl,--gc-sections
+compiler.c.elf.cmd=avr-gcc
+compiler.S.flags=-c -g -x assembler-with-cpp
+compiler.cpp.cmd=avr-g++
+compiler.cpp.flags=-c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD
+compiler.ar.cmd=avr-ar
+compiler.ar.flags=rcs
+compiler.objcopy.cmd=avr-objcopy
+compiler.objcopy.eep.flags=-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0
+compiler.elf2hex.flags=-O ihex -R .eeprom
+compiler.elf2hex.cmd=avr-objcopy
+compiler.ldflags=
+compiler.size.cmd=avr-size
+compiler.c.extra_flags=
+compiler.c.elf.extra_flags=
+compiler.S.extra_flags=
+compiler.cpp.extra_flags=
+compiler.ar.extra_flags=
+compiler.objcopy.eep.extra_flags=
+compiler.elf2hex.extra_flags=
+recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.c.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.S.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.S.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.S.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} {compiler.ar.extra_flags} "{build.path}/{archive_file}" "{object_file}"
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} -mmcu={build.mcu} {compiler.c.elf.extra_flags} -o "{build.path}/{build.project_name}.elf" {object_files} "{build.path}/{archive_file}" "-L{build.path}" -lm
+recipe.objcopy.eep.pattern="{compiler.path}{compiler.objcopy.cmd}" {compiler.objcopy.eep.flags} {compiler.objcopy.eep.extra_flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.eep"
+recipe.objcopy.hex.pattern="{compiler.path}{compiler.elf2hex.cmd}" {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.hex"
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build.project_name}.elf"
+recipe.size.regex=^(?:\.text|\.data|\.bootloader)\s+([0-9]+).*
+recipe.size.regex.data=^(?:\.data|\.bss|\.noinit)\s+([0-9]+).*
+recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*
+tools.avrdude.cmd.path={runtime.ide.path}/hardware/tools/avr/bin/avrdude
+tools.avrdude.config.path={runtime.ide.path}/hardware/tools/avr/etc/avrdude.conf
+tools.avrdude.upload.params.verbose=-v
+tools.avrdude.upload.params.quiet=-q -q
+tools.avrdude.upload.pattern="{cmd.path}" "-C{config.path}" {upload.verbose} -p{build.mcu} -c{upload.protocol} -P{serial.port} -b{upload.speed} -D "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.program.params.verbose=-v
+tools.avrdude.program.params.quiet=-q -q
+tools.avrdude.program.pattern="{cmd.path}" "-C{config.path}" {program.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.erase.params.verbose=-v
+tools.avrdude.erase.params.quiet=-q -q
+tools.avrdude.erase.pattern="{cmd.path}" "-C{config.path}" {erase.verbose} -p{build.mcu} -c{protocol} {program.extra_params} -e -Ulock:w:{bootloader.unlock_bits}:m -Uefuse:w:{bootloader.extended_fuses}:m -Uhfuse:w:{bootloader.high_fuses}:m -Ulfuse:w:{bootloader.low_fuses}:m
+tools.avrdude.bootloader.params.verbose=-v
+tools.avrdude.bootloader.params.quiet=-q -q
+tools.avrdude.bootloader.pattern="{cmd.path}" "-C{config.path}" {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{runtime.platform.path}/bootloaders/{bootloader.file}:i" -Ulock:w:{bootloader.lock_bits}:m
+build.usb_manufacturer=
+build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'
+vm.platform.root.path=C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino16x
+ide.hint=Arduino 1.6 Ide
+ide.location.key=Arduino16x
+ide.location.ide.winreg=Arduino 1.6.x Application
+ide.location.sketchbook.winreg=Arduino 1.6.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.location.preferences=%VM_APPDATA_ROAMING%\arduino15\preferences.txt
+ide.location.preferences_fallback=%VM_APPDATA_ROAMING%\arduino\preferences.txt
+ide.default.version=160
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=arduino.h
+ide.platformswithoutpackage=false
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionGTEQ=160
+ide.exe=arduino.exe
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+vm.debug=true
+software=ARDUINO
+ssh.user.name=root
+ssh.user.default.password=arduino
+ssh.host.wwwfiles.path=/www/sd
+build.working_directory={runtime.ide.path}
+ide.appid=arduino16x
+location.sketchbook=C:\Users\kotzukaru\Documents\Arduino
+vm.core.include=arduino.h
+vm.boardsource.path=C:\ArduinoIDE\arduino-1.6.0\hardware\arduino\avr
+runtime.platform.path=C:\ArduinoIDE\arduino-1.6.0\hardware\arduino\avr
+vm.platformname.name=avr
+build.arch=AVR
+</arduino.board.property_bag>
+        <arduino.build.mcu>atmega32u4</arduino.build.mcu>
+        <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
+        <arduino.build.core>arduino</arduino.build.core>
+        <arduino.upload.protocol>avr109</arduino.upload.protocol>
+        <arduino.upload.speed>57600</arduino.upload.speed>
+        <arduino.upload.maximum_size>28672</arduino.upload.maximum_size>
+        <visualmicro.application.name>arduino16x</visualmicro.application.name>
+        <visualmicro.package.name>arduino</visualmicro.package.name>
+        <visualmicro.platform.name>avr</visualmicro.platform.name>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
@@ -144,8 +300,13 @@
   <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcc.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>__AVR_ATmega168__</Value>
-      <Value>ARDUINO=158</Value>
+      <Value>__AVR_ATmega32u4__</Value>
+      <Value>__AVR_ATmega32U4__</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x8036</Value>
+      <Value>USB_MANUFACTURER=</Value>
+      <Value>USB_PRODUCT="\"Arduino Leonardo\""</Value>
+      <Value>ARDUINO=160</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
       <Value>__AVR__</Value>
@@ -153,23 +314,28 @@
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
-      <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/</Value>
-      <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/avr/</Value>
-      <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/</Value>
+      <Value></Value>
+      <Value>c:/arduinoide/arduino-1.6.0/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
+      <Value>c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/</Value>
+      <Value>c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/include/</Value>
       <Value>C:/Users/kotzukaru/Documents/Arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature/utility</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial/utility</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/Temperature/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/Temperature</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/LiquidCrystal/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/LiquidCrystal</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/SoftwareSerial/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/SoftwareSerial</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/OneWire/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/OneWire</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/Wire/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/Wire</Value>
       <Value>../../RemoteSensors</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/standard</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/cores/arduino</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/variants/leonardo</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/cores/arduino</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
   <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
@@ -181,8 +347,13 @@
   <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcccpp.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>__AVR_ATmega168__</Value>
-      <Value>ARDUINO=158</Value>
+      <Value>__AVR_ATmega32u4__</Value>
+      <Value>__AVR_ATmega32U4__</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x8036</Value>
+      <Value>USB_MANUFACTURER=</Value>
+      <Value>USB_PRODUCT="\"Arduino Leonardo\""</Value>
+      <Value>ARDUINO=160</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
       <Value>__AVR__</Value>
@@ -190,23 +361,28 @@
   </avrgcccpp.compiler.symbols.DefSymbols>
   <avrgcccpp.compiler.directories.IncludePaths>
     <ListValues>
-      <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
-      <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/</Value>
-      <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/avr/</Value>
-      <Value>c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/</Value>
+      <Value></Value>
+      <Value>c:/arduinoide/arduino-1.6.0/hardware/tools/avr/lib/gcc/avr/4.8.1/include/</Value>
+      <Value>c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/</Value>
+      <Value>c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/include/</Value>
       <Value>C:/Users/kotzukaru/Documents/Arduino/libraries</Value>
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature/utility</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial/utility</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/Temperature/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/Temperature</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/LiquidCrystal/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/LiquidCrystal</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/SoftwareSerial/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/SoftwareSerial</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/OneWire/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/OneWire</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/Wire/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/Wire</Value>
       <Value>../../RemoteSensors</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/standard</Value>
-      <Value>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/cores/arduino</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/variants/leonardo</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/cores/arduino</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
   <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
@@ -217,10 +393,146 @@
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/cores/arduino;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/leonardo;../../RemoteSensors;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire;C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature;C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature/utility;C:/ArduinoIDE/arduino-1.5.8/libraries;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/kotzukaru/Documents/Arduino/libraries;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/avr/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/Wire;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/Wire/utility;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/standard;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/cores/arduino;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/leonardo;../../RemoteSensors;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/SoftwareSerial/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire;C:/ArduinoIDE/arduino-1.5.8/libraries/OneWire/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature;C:/ArduinoIDE/arduino-1.5.8/libraries/Temperature/utility;C:/ArduinoIDE/arduino-1.5.8/libraries;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/kotzukaru/Documents/Arduino/libraries;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/include/avr/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/avr/;c:/arduinoide/arduino-1.5.8/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/Wire;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/libraries/Wire/utility;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/avr/variants/standard;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/cores/arduino;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/variants/arduino_due_x;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/libraries;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/system/CMSIS/Device/ATMEL/;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/system/libsam;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/system/libsam/include;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/system/CMSIS/CMSIS/Include/;C:/ArduinoIDE/arduino-1.5.8/hardware/tools/g++_arm_none_eabi/arm-none-eabi/include;C:/ArduinoIDE/arduino-1.5.8/hardware/tools/g++_arm_none_eabi/arm_none_eabi/include/;C:/ArduinoIDE/arduino-1.5.8/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include;C:/ArduinoIDE/arduino-1.5.8/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include/;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/libraries/Wire;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/libraries/Wire/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/LiquidCrystal/src;C:/ArduinoIDE/arduino-1.5.8/libraries/LiquidCrystal/src/utility;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/cores/arduino;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/variants/leonardo;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/Wire;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/Wire/utility;C:/ArduinoIDE/arduino-1.6.0/libraries/OneWire;C:/ArduinoIDE/arduino-1.6.0/libraries/OneWire/utility;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/SoftwareSerial;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/SoftwareSerial/utility;C:/ArduinoIDE/arduino-1.6.0/libraries/LiquidCrystal/src;C:/ArduinoIDE/arduino-1.6.0/libraries/LiquidCrystal/src/utility;C:/ArduinoIDE/arduino-1.6.0/libraries/Temperature;C:/ArduinoIDE/arduino-1.6.0/libraries/Temperature/utility;C:/ArduinoIDE/arduino-1.6.0/libraries;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries;c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/include/;c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/include/avr/;c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/;c:/arduinoide/arduino-1.6.0/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;C:/ArduinoIDE/arduino-1.6.0/libraries/LiquidCrystal;C:/ArduinoIDE/arduino-1.6.0/libraries/LiquidCrystal/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
-        <arduino.upload.port>COM12</arduino.upload.port>
+        <arduino.upload.port>COM10</arduino.upload.port>
+        <arduino.board.name>leonardo</arduino.board.name>
+        <arduino.board.desc>Arduino Leonardo</arduino.board.desc>
+        <arduino.board.property_bag>name=Arduino Leonardo
+vid.0=0x2341
+pid.0=0x0036
+vid.1=0x2341
+pid.1=0x8036
+upload.tool=avrdude
+upload.protocol=avr109
+upload.maximum_size=28672
+upload.maximum_data_size=2560
+upload.speed=57600
+upload.disable_flushing=true
+upload.use_1200bps_touch=true
+upload.wait_for_upload_port=true
+bootloader.tool=avrdude
+bootloader.low_fuses=0xff
+bootloader.high_fuses=0xd8
+bootloader.extended_fuses=0xcb
+bootloader.file=caterina/Caterina-Leonardo.hex
+bootloader.unlock_bits=0x3F
+bootloader.lock_bits=0x2F
+build.mcu=atmega32u4
+build.f_cpu=16000000L
+build.vid=0x2341
+build.pid=0x8036
+build.usb_product="Arduino Leonardo"
+build.board=AVR_LEONARDO
+build.core=arduino
+build.variant=leonardo
+build.extra_flags={build.usb_flags}
+runtime.ide.path=C:\ArduinoIDE\arduino-1.6.0
+build.system.path=C:\ArduinoIDE\arduino-1.6.0\hardware\arduino\avr\system
+runtime.ide.version=160
+originalid=leonardo
+tools.atprogram.cmd.path=%AVRSTUDIO_EXE_PATH%\atbackend\atprogram
+tools.atprogram.cmd.setwinpath=true
+tools.atprogram.program.params.verbose=-v
+tools.atprogram.program.params.quiet=-q
+tools.atprogram.program.pattern="{cmd.path}" -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+tools.atprogram.program.xpattern="{cmd.path}" {AVRSTUDIO_BACKEND_CONNECTION} -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+version=1.6.0
+compiler.path={runtime.ide.path}/hardware/tools/avr/bin/
+compiler.c.cmd=avr-gcc
+compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -MMD
+compiler.c.elf.flags=-w -Os -Wl,--gc-sections
+compiler.c.elf.cmd=avr-gcc
+compiler.S.flags=-c -g -x assembler-with-cpp
+compiler.cpp.cmd=avr-g++
+compiler.cpp.flags=-c -g -Os -w -fno-exceptions -ffunction-sections -fdata-sections -fno-threadsafe-statics -MMD
+compiler.ar.cmd=avr-ar
+compiler.ar.flags=rcs
+compiler.objcopy.cmd=avr-objcopy
+compiler.objcopy.eep.flags=-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0
+compiler.elf2hex.flags=-O ihex -R .eeprom
+compiler.elf2hex.cmd=avr-objcopy
+compiler.ldflags=
+compiler.size.cmd=avr-size
+compiler.c.extra_flags=
+compiler.c.elf.extra_flags=
+compiler.S.extra_flags=
+compiler.cpp.extra_flags=
+compiler.ar.extra_flags=
+compiler.objcopy.eep.extra_flags=
+compiler.elf2hex.extra_flags=
+recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.c.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.S.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.S.flags} -mmcu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.S.extra_flags} {build.extra_flags} {includes} "{source_file}" -o "{object_file}"
+recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} {compiler.ar.extra_flags} "{build.path}/{archive_file}" "{object_file}"
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} -mmcu={build.mcu} {compiler.c.elf.extra_flags} -o "{build.path}/{build.project_name}.elf" {object_files} "{build.path}/{archive_file}" "-L{build.path}" -lm
+recipe.objcopy.eep.pattern="{compiler.path}{compiler.objcopy.cmd}" {compiler.objcopy.eep.flags} {compiler.objcopy.eep.extra_flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.eep"
+recipe.objcopy.hex.pattern="{compiler.path}{compiler.elf2hex.cmd}" {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.hex"
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build.project_name}.elf"
+recipe.size.regex=^(?:\.text|\.data|\.bootloader)\s+([0-9]+).*
+recipe.size.regex.data=^(?:\.data|\.bss|\.noinit)\s+([0-9]+).*
+recipe.size.regex.eeprom=^(?:\.eeprom)\s+([0-9]+).*
+tools.avrdude.cmd.path={runtime.ide.path}/hardware/tools/avr/bin/avrdude
+tools.avrdude.config.path={runtime.ide.path}/hardware/tools/avr/etc/avrdude.conf
+tools.avrdude.upload.params.verbose=-v
+tools.avrdude.upload.params.quiet=-q -q
+tools.avrdude.upload.pattern="{cmd.path}" "-C{config.path}" {upload.verbose} -p{build.mcu} -c{upload.protocol} -P{serial.port} -b{upload.speed} -D "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.program.params.verbose=-v
+tools.avrdude.program.params.quiet=-q -q
+tools.avrdude.program.pattern="{cmd.path}" "-C{config.path}" {program.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{build.path}/{build.project_name}.hex:i"
+tools.avrdude.erase.params.verbose=-v
+tools.avrdude.erase.params.quiet=-q -q
+tools.avrdude.erase.pattern="{cmd.path}" "-C{config.path}" {erase.verbose} -p{build.mcu} -c{protocol} {program.extra_params} -e -Ulock:w:{bootloader.unlock_bits}:m -Uefuse:w:{bootloader.extended_fuses}:m -Uhfuse:w:{bootloader.high_fuses}:m -Ulfuse:w:{bootloader.low_fuses}:m
+tools.avrdude.bootloader.params.verbose=-v
+tools.avrdude.bootloader.params.quiet=-q -q
+tools.avrdude.bootloader.pattern="{cmd.path}" "-C{config.path}" {bootloader.verbose} -p{build.mcu} -c{protocol} {program.extra_params} "-Uflash:w:{runtime.platform.path}/bootloaders/{bootloader.file}:i" -Ulock:w:{bootloader.lock_bits}:m
+build.usb_manufacturer=
+build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'
+vm.platform.root.path=C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino16x
+ide.hint=Arduino 1.6 Ide
+ide.location.key=Arduino16x
+ide.location.ide.winreg=Arduino 1.6.x Application
+ide.location.sketchbook.winreg=Arduino 1.6.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.location.preferences=%VM_APPDATA_ROAMING%\arduino15\preferences.txt
+ide.location.preferences_fallback=%VM_APPDATA_ROAMING%\arduino\preferences.txt
+ide.default.version=160
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=arduino.h
+ide.platformswithoutpackage=false
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionGTEQ=160
+ide.exe=arduino.exe
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+vm.debug=true
+software=ARDUINO
+ssh.user.name=root
+ssh.user.default.password=arduino
+ssh.host.wwwfiles.path=/www/sd
+build.working_directory={runtime.ide.path}
+ide.appid=arduino16x
+location.sketchbook=C:\Users\kotzukaru\Documents\Arduino
+vm.core.include=arduino.h
+vm.boardsource.path=C:\ArduinoIDE\arduino-1.6.0\hardware\arduino\avr
+runtime.platform.path=C:\ArduinoIDE\arduino-1.6.0\hardware\arduino\avr
+vm.platformname.name=avr
+build.arch=AVR
+</arduino.board.property_bag>
+        <arduino.build.mcu>atmega32u4</arduino.build.mcu>
+        <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
+        <arduino.build.core>arduino</arduino.build.core>
+        <arduino.upload.protocol>avr109</arduino.upload.protocol>
+        <arduino.upload.speed>57600</arduino.upload.speed>
+        <arduino.upload.maximum_size>28672</arduino.upload.maximum_size>
+        <visualmicro.application.name>arduino16x</visualmicro.application.name>
+        <visualmicro.package.name>arduino</visualmicro.package.name>
+        <visualmicro.platform.name>avr</visualmicro.platform.name>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
@@ -234,8 +546,8 @@
     <Folder Include="src\sketch-api-readonly\" />
     <Folder Include="src\sketch-api-readonly\core\" />
     <Folder Include="src\sketch-api-readonly\libraries\" />
-    <Folder Include="src\sketch-api-readonly\libraries\Firmata\" />
-    <Folder Include="src\sketch-api-readonly\libraries\Firmata\src\" />
+    <Folder Include="src\sketch-api-readonly\libraries\LiquidCrystal\" />
+    <Folder Include="src\sketch-api-readonly\libraries\LiquidCrystal\src\" />
     <Folder Include="src\sketch-api-readonly\libraries\OneWire\" />
     <Folder Include="src\sketch-api-readonly\libraries\SoftwareSerial\" />
     <Folder Include="src\sketch-api-readonly\libraries\Temperature\" />
@@ -246,229 +558,283 @@
     <Folder Include="Visual Micro\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\abi.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\abi.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\abi.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\Arduino.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\Arduino.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\Arduino.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\binary.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\binary.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\binary.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\CDC.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\CDC.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\CDC.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\Client.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\Client.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\Client.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\HardwareSerial.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\HardwareSerial.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\HardwareSerial.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\HardwareSerial.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\HardwareSerial.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\HardwareSerial.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\HardwareSerial0.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\HardwareSerial0.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\HardwareSerial0.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\HardwareSerial1.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\HardwareSerial1.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\HardwareSerial1.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\HardwareSerial2.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\HardwareSerial2.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\HardwareSerial2.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\HardwareSerial3.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\HardwareSerial3.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\HardwareSerial3.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\HardwareSerial_private.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\HardwareSerial_private.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\HardwareSerial_private.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\HID.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\HID.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\HID.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\hooks.c">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\hooks.c">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\hooks.c</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\IPAddress.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\IPAddress.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\IPAddress.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\IPAddress.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\IPAddress.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\IPAddress.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\main.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\main.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\main.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\new.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\new.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\new.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\new.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\new.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\new.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\Print.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\Print.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\Print.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\Print.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\Print.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\Print.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\Printable.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\Printable.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\Printable.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\Server.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\Server.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\Server.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\Stream.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\Stream.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\Stream.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\Stream.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\Stream.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\Stream.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\Tone.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\Tone.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\Tone.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\Udp.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\Udp.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\Udp.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\USBAPI.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\USBAPI.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\USBAPI.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\USBCore.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\USBCore.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\USBCore.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\USBCore.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\USBCore.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\USBCore.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\USBDesc.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\USBDesc.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\USBDesc.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\WCharacter.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\WCharacter.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\WCharacter.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\WInterrupts.c">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\WInterrupts.c">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\WInterrupts.c</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\wiring.c">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\wiring.c">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\wiring.c</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\wiring_analog.c">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\wiring_analog.c">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\wiring_analog.c</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\wiring_digital.c">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\wiring_digital.c">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\wiring_digital.c</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\wiring_private.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\wiring_private.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\wiring_private.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\wiring_pulse.c">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\wiring_pulse.c">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\wiring_pulse.c</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\wiring_shift.c">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\wiring_shift.c">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\wiring_shift.c</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\WMath.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\WMath.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\WMath.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\WString.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\WString.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\WString.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\cores\arduino\WString.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\cores\arduino\WString.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\WString.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\libraries\SoftwareSerial\SoftwareSerial.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\libraries\SoftwareSerial\SoftwareSerial.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\libraries\SoftwareSerial\SoftwareSerial.cpp</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\libraries\SoftwareSerial\SoftwareSerial.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\libraries\SoftwareSerial\SoftwareSerial.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\libraries\SoftwareSerial\SoftwareSerial.h</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\hardware\arduino\avr\variants\leonardo\pins_arduino.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\variants\leonardo\pins_arduino.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\libraries\OneWire\OneWire.cpp">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\libraries\OneWire\OneWire.cpp</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\libraries\OneWire\OneWire.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\libraries\OneWire\OneWire.h</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\libraries\Temperature\DallasTemperature.cpp">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\libraries\Temperature\DallasTemperature.cpp</Link>
-    </Compile>
-    <Compile Include="..\..\..\..\..\ArduinoIDE\arduino-1.5.8\libraries\Temperature\DallasTemperature.h">
-      <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\libraries\Temperature\DallasTemperature.h</Link>
-    </Compile>
-    <Compile Include="..\..\arduino-1.5.8\hardware\arduino\avr\libraries\Wire\utility\twi.c">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\libraries\Wire\utility\twi.c">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\libraries\Wire\utility\twi.c</Link>
     </Compile>
-    <Compile Include="..\..\arduino-1.5.8\hardware\arduino\avr\libraries\Wire\utility\twi.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\libraries\Wire\utility\twi.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\libraries\Wire\utility\twi.h</Link>
     </Compile>
-    <Compile Include="..\..\arduino-1.5.8\hardware\arduino\avr\libraries\Wire\Wire.cpp">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\libraries\Wire\Wire.cpp">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\libraries\Wire\Wire.cpp</Link>
+      <CustomCompilationSetting Condition="'$(Configuration)' == 'Release'"> -I"C:\ArduinoIDE\arduino-1.6.0\hardware\arduino\avr\libraries\Wire\utility"</CustomCompilationSetting>
     </Compile>
-    <Compile Include="..\..\arduino-1.5.8\hardware\arduino\avr\libraries\Wire\Wire.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\libraries\Wire\Wire.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\libraries\Wire\Wire.h</Link>
+      <CustomCompilationSetting Condition="'$(Configuration)' == 'Release'"> -I"C:\ArduinoIDE\arduino-1.6.0\hardware\arduino\avr\libraries\Wire\utility"</CustomCompilationSetting>
     </Compile>
-    <Compile Include="..\..\arduino-1.5.8\libraries\Firmata\src\Boards.h">
+    <Compile Include="..\..\arduino-1.6.0\hardware\arduino\avr\variants\leonardo\pins_arduino.h">
       <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\libraries\Firmata\src\Boards.h</Link>
+      <Link>src\sketch-api-readonly\variants\leonardo\pins_arduino.h</Link>
     </Compile>
-    <Compile Include="..\..\arduino-1.5.8\libraries\Firmata\src\Firmata.cpp">
+    <Compile Include="..\..\arduino-1.6.0\libraries\LiquidCrystal\src\FastIO.cpp">
       <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\libraries\Firmata\src\Firmata.cpp</Link>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\FastIO.cpp</Link>
     </Compile>
-    <Compile Include="..\..\arduino-1.5.8\libraries\Firmata\src\Firmata.h">
+    <Compile Include="..\..\arduino-1.6.0\libraries\LiquidCrystal\src\FastIO.h">
       <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\libraries\Firmata\src\Firmata.h</Link>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\FastIO.h</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\LiquidCrystal\src\I2CIO.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\I2CIO.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\LiquidCrystal\src\I2CIO.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\I2CIO.h</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\LiquidCrystal\src\LCD.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\LCD.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\LiquidCrystal\src\LCD.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\LCD.h</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\LiquidCrystal\src\LiquidCrystal.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\LiquidCrystal.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\LiquidCrystal\src\LiquidCrystal.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\LiquidCrystal.h</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\LiquidCrystal\src\LiquidCrystal_I2C.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\LiquidCrystal_I2C.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\LiquidCrystal\src\LiquidCrystal_I2C.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\LiquidCrystal_I2C.h</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\LiquidCrystal\src\LiquidCrystal_SR.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\LiquidCrystal_SR.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\LiquidCrystal\src\LiquidCrystal_SR.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\LiquidCrystal_SR.h</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\LiquidCrystal\src\LiquidCrystal_SR2W.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\LiquidCrystal_SR2W.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\LiquidCrystal\src\LiquidCrystal_SR2W.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\LiquidCrystal_SR2W.h</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\LiquidCrystal\src\LiquidCrystal_SR3W.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\LiquidCrystal_SR3W.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\LiquidCrystal\src\LiquidCrystal_SR3W.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\LiquidCrystal\src\LiquidCrystal_SR3W.h</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\OneWire\OneWire.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\OneWire\OneWire.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\OneWire\OneWire.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\OneWire\OneWire.h</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\Temperature\DallasTemperature.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Temperature\DallasTemperature.cpp</Link>
+    </Compile>
+    <Compile Include="..\..\arduino-1.6.0\libraries\Temperature\DallasTemperature.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Temperature\DallasTemperature.h</Link>
     </Compile>
     <Compile Include="BTComLib.cpp">
       <SubType>compile</SubType>

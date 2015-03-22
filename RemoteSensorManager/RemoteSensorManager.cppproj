@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.ARMGCC.CPP</ToolchainName>
+    <ProjectGuid>{6fcc8c11-094c-4e8d-821d-90d9df242911}</ProjectGuid>
+    <avrdevice>ATSAM3X8E</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>RemoteSensorManager</AssemblyName>
+    <Name>RemoteSensorManager</Name>
+    <RootNamespace>RemoteSensorManager</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <UncachedRange />
+    <OverrideVtorValue>exception_table</OverrideVtorValue>
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.17.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <preserveEEPROM>true</preserveEEPROM>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__SAM3X8E__</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x003e</Value>
+      <Value>USBCON</Value>
+      <Value>USB_MANUFACTURER="\"Unknown\""</Value>
+      <Value>USB_PRODUCT="\"Arduino Due\""</Value>
+      <Value>ARDUINO=160</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=84000000L</Value>
+      <Value>printf=iprintf</Value>
+      <Value>__SAM__</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value></Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include/</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/arm_none_eabi/include/</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/arm-none-eabi/include</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/CMSIS/CMSIS/Include/</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/libsam/include</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/libsam</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/CMSIS/Device/ATMEL/</Value>
+      <Value>C:/Users/kotzukaru/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/RTC/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/RTC</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/UIPEthernet/src/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/UIPEthernet/src</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/SdFat/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/SdFat</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/SPI/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/SPI</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/Wire/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/Wire</Value>
+      <Value>../../RemoteSensorManager</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/variants/arduino_due_x</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/cores/arduino</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__SAM3X8E__</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x003e</Value>
+      <Value>USBCON</Value>
+      <Value>USB_MANUFACTURER="\"Unknown\""</Value>
+      <Value>USB_PRODUCT="\"Arduino Due\""</Value>
+      <Value>ARDUINO=160</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=84000000L</Value>
+      <Value>printf=iprintf</Value>
+      <Value>__SAM__</Value>
+    </ListValues>
+  </armgcccpp.compiler.symbols.DefSymbols>
+  <armgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value></Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include/</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/arm_none_eabi/include/</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/arm-none-eabi/include</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/CMSIS/CMSIS/Include/</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/libsam/include</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/libsam</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/CMSIS/Device/ATMEL/</Value>
+      <Value>C:/Users/kotzukaru/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/RTC/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/RTC</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/UIPEthernet/src/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/UIPEthernet/src</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/SdFat/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/SdFat</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/SPI/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/SPI</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/Wire/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/Wire</Value>
+      <Value>../../RemoteSensorManager</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/variants/arduino_due_x</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/cores/arduino</Value>
+    </ListValues>
+  </armgcccpp.compiler.directories.IncludePaths>
+  <armgcccpp.compiler.optimization.level>Optimize for size (-Os)</armgcccpp.compiler.optimization.level>
+  <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+  <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+  <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsam3x8e_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+  <armgcccpp.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\sam3xa\include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+    </ListValues>
+  </armgcccpp.preprocessingassembler.general.IncludePaths>
+</ArmGccCpp>
+    </ToolchainSettings>
+    <VisualMicroSettings>
+      <VisualMicroSettings>
+        <arduino.upload.port>COM13</arduino.upload.port>
+        <arduino.board.name>arduino_due_x_dbg</arduino.board.name>
+        <arduino.board.desc>Arduino Due (Programming Port)</arduino.board.desc>
+        <arduino.board.property_bag>name=Arduino Due (Programming Port)
+vid.0=0x2341
+pid.0=0x003d
+upload.tool=bossac
+upload.protocol=sam-ba
+upload.maximum_size=524288
+upload.use_1200bps_touch=true
+upload.wait_for_upload_port=false
+upload.native_usb=false
+build.mcu=cortex-m3
+build.f_cpu=84000000L
+build.usb_product="Arduino Due"
+build.board=SAM_DUE
+build.core=arduino
+build.extra_flags=-D__SAM3X8E__ -mthumb {build.usb_flags}
+build.ldscript=linker_scripts/gcc/flash.ld
+build.variant=arduino_due_x
+build.variant_system_lib=libsam_sam3x8e_gcc_rel.a
+build.vid=0x2341
+build.pid=0x003e
+runtime.ide.path=C:\ArduinoIDE\arduino-1.6.0
+build.system.path=C:\ArduinoIDE\arduino-1.6.0\hardware\arduino\sam\system
+runtime.ide.version=160
+originalid=arduino_due_x_dbg
+intellisense.tools.path={runtime.ide.path}/hardware/tools/g++_arm_none_eabi
+intellisense.include.paths={build.core.coresparentfolder.vmresolved}\system\CMSIS\Device\ATMEL\;{build.core.coresparentfolder.vmresolved}\system\libsam;{build.core.coresparentfolder.vmresolved}\system\libsam\include;{build.core.coresparentfolder.vmresolved}\system\CMSIS\CMSIS\Include\;{vm.boardsource.path}\system\CMSIS\CMSIS\Include\;{vm.boardsource.path}\system\CMSIS\Device\ATMEL\;{vm.boardsource.path}\system\libsam;{vm.boardsource.path}\system\libsam\include;{intellisense.tools.path}\arm-none-eabi\include;{intellisense.tools.path}\arm_none_eabi\include\;{intellisense.tools.path}\lib\gcc\arm-none-eabi\4.4.1\include;{intellisense.tools.path}\lib\gcc\arm-none-eabi\4.4.1\include\;
+tools.atprogram.cmd.path=%AVRSTUDIO_EXE_PATH%\atbackend\atprogram
+tools.atprogram.cmd.setwinpath=true
+tools.atprogram.program.params.verbose=-v
+tools.atprogram.program.params.quiet=-q
+tools.atprogram.program.pattern="{cmd.path}" -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+tools.atprogram.program.xpattern="{cmd.path}" {AVRSTUDIO_BACKEND_CONNECTION} -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+version=1.6.0
+compiler.path={runtime.ide.path}/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/
+compiler.c.cmd=arm-none-eabi-gcc
+compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -nostdlib --param max-inline-insns-single=500 -Dprintf=iprintf -MMD
+compiler.c.elf.cmd=arm-none-eabi-gcc
+compiler.c.elf.flags=-Os -Wl,--gc-sections
+compiler.S.flags=-c -g -x assembler-with-cpp
+compiler.cpp.cmd=arm-none-eabi-g++
+compiler.cpp.flags=-c -g -Os -w -ffunction-sections -fdata-sections -nostdlib -fno-threadsafe-statics --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -Dprintf=iprintf -MMD
+compiler.ar.cmd=arm-none-eabi-ar
+compiler.ar.flags=rcs
+compiler.objcopy.cmd=arm-none-eabi-objcopy
+compiler.objcopy.eep.flags=-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0
+compiler.elf2hex.flags=-O binary
+compiler.elf2hex.cmd=arm-none-eabi-objcopy
+compiler.ldflags=
+compiler.size.cmd=arm-none-eabi-size
+compiler.define=-DARDUINO=
+compiler.c.extra_flags=
+compiler.c.elf.extra_flags=
+compiler.cpp.extra_flags=
+compiler.ar.extra_flags=
+compiler.elf2hex.extra_flags=
+compiler.libsam.c.flags="-I{build.system.path}/libsam" "-I{build.system.path}/CMSIS/CMSIS/Include/" "-I{build.system.path}/CMSIS/Device/ATMEL/"
+build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} -DUSBCON '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'
+build.usb_manufacturer="Unknown"
+recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} -mcpu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.c.extra_flags} {build.extra_flags} {compiler.libsam.c.flags} {includes} "{source_file}" -o "{object_file}"
+recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} -mcpu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {compiler.libsam.c.flags} {includes} "{source_file}" -o "{object_file}"
+recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} {compiler.ar.extra_flags} "{build.path}/{archive_file}" "{object_file}"
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} -mcpu={build.mcu} "-T{build.variant.path}/{build.ldscript}" "-Wl,-Map,{build.path}/{build.project_name}.map" {compiler.c.elf.extra_flags} -o "{build.path}/{build.project_name}.elf" "-L{build.path}" -mthumb -Wl,--cref -Wl,--check-sections -Wl,--gc-sections -Wl,--entry=Reset_Handler -Wl,--unresolved-symbols=report-all -Wl,--warn-common -Wl,--warn-section-align -Wl,--warn-unresolved-symbols -Wl,--start-group "{build.path}/syscalls_sam3.c.o" {object_files} "{build.variant.path}/{build.variant_system_lib}" "{build.path}/{archive_file}" -Wl,--end-group -lm -gcc
+recipe.objcopy.eep.pattern=
+recipe.objcopy.hex.pattern="{compiler.path}{compiler.elf2hex.cmd}" {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.bin"
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build.project_name}.elf"
+recipe.size.regex=\.text\s+([0-9]+).*
+tools.bossac.cmd=bossac.exe
+tools.bossac.cmd.windows=bossac.exe
+tools.bossac.path={runtime.ide.path}/hardware/tools
+tools.bossac.upload.params.verbose=-i -d
+tools.bossac.upload.params.quiet=
+tools.bossac.upload.pattern="{path}/{cmd}" {upload.verbose} --port={serial.port.file} -U {upload.native_usb} -e -w -v -b "{build.path}/{build.project_name}.bin" -R
+vm.platform.root.path=C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino16x
+ide.hint=Arduino 1.6 Ide
+ide.location.key=Arduino16x
+ide.location.ide.winreg=Arduino 1.6.x Application
+ide.location.sketchbook.winreg=Arduino 1.6.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.location.preferences=%VM_APPDATA_ROAMING%\arduino15\preferences.txt
+ide.location.preferences_fallback=%VM_APPDATA_ROAMING%\arduino\preferences.txt
+ide.default.version=160
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=arduino.h
+ide.platformswithoutpackage=false
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionGTEQ=160
+ide.exe=arduino.exe
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+vm.debug=true
+software=ARDUINO
+ssh.user.name=root
+ssh.user.default.password=arduino
+ssh.host.wwwfiles.path=/www/sd
+build.working_directory={runtime.ide.path}
+ide.appid=arduino16x
+location.sketchbook=C:\Users\kotzukaru\Documents\Arduino
+vm.core.include=arduino.h
+vm.boardsource.path=C:\ArduinoIDE\arduino-1.6.0\hardware\arduino\sam
+runtime.platform.path=C:\ArduinoIDE\arduino-1.6.0\hardware\arduino\sam
+vm.platformname.name=sam
+build.arch=SAM
+</arduino.board.property_bag>
+        <arduino.build.mcu>cortex-m3</arduino.build.mcu>
+        <arduino.build.f_cpu>84000000L</arduino.build.f_cpu>
+        <arduino.build.core>arduino</arduino.build.core>
+        <arduino.upload.protocol>sam-ba</arduino.upload.protocol>
+        <arduino.upload.maximum_size>524288</arduino.upload.maximum_size>
+        <visualmicro.application.name>arduino16x</visualmicro.application.name>
+        <visualmicro.package.name>arduino</visualmicro.package.name>
+        <visualmicro.platform.name>sam</visualmicro.platform.name>
+      </VisualMicroSettings>
+    </VisualMicroSettings>
+    <VMSETTING_IncludePaths>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/cores/arduino;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/variants/arduino_due_x;../../RemoteSensorManager;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/libraries/Wire;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/libraries/Wire/utility;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/libraries/SPI;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/libraries/SPI/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/SdFat;C:/ArduinoIDE/arduino-1.5.8/libraries/SdFat/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/UIPEthernet/src;C:/ArduinoIDE/arduino-1.5.8/libraries/UIPEthernet/src/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/RTC;C:/ArduinoIDE/arduino-1.5.8/libraries/RTC/utility;C:/ArduinoIDE/arduino-1.5.8/libraries;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/kotzukaru/Documents/Arduino/libraries;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/system/CMSIS/Device/ATMEL/;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/system/libsam;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/system/libsam/include;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/system/CMSIS/CMSIS/Include/;C:/ArduinoIDE/arduino-1.5.8/hardware/tools/g++_arm_none_eabi/arm-none-eabi/include;C:/ArduinoIDE/arduino-1.5.8/hardware/tools/g++_arm_none_eabi/arm_none_eabi/include/;C:/ArduinoIDE/arduino-1.5.8/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include;C:/ArduinoIDE/arduino-1.5.8/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include/;;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/cores/arduino;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/variants/leonardo;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/Wire;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/Wire/utility;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/SPI;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/SPI/utility;C:/ArduinoIDE/arduino-1.6.0/libraries/SdFat;C:/ArduinoIDE/arduino-1.6.0/libraries/SdFat/utility;C:/ArduinoIDE/arduino-1.6.0/libraries/UIPEthernet/src;C:/ArduinoIDE/arduino-1.6.0/libraries/UIPEthernet/src/utility;C:/ArduinoIDE/arduino-1.6.0/libraries/RTC;C:/ArduinoIDE/arduino-1.6.0/libraries/RTC/utility;C:/ArduinoIDE/arduino-1.6.0/libraries;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries;c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/include/;c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/include/avr/;c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/;c:/arduinoide/arduino-1.6.0/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/cores/arduino;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/variants/arduino_due_x;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/Wire;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/Wire/utility;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/SPI;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/SPI/utility;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/CMSIS/Device/ATMEL/;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/libsam;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/libsam/include;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/CMSIS/CMSIS/Include/;C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/arm-none-eabi/include;C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/arm_none_eabi/include/;C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include;C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include/;</VMSETTING_IncludePaths>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <ArmGccCpp>
+  <armgcc.common.outputfiles.hex>True</armgcc.common.outputfiles.hex>
+  <armgcc.common.outputfiles.lss>True</armgcc.common.outputfiles.lss>
+  <armgcc.common.outputfiles.eep>True</armgcc.common.outputfiles.eep>
+  <armgcc.common.outputfiles.bin>True</armgcc.common.outputfiles.bin>
+  <armgcc.common.outputfiles.srec>True</armgcc.common.outputfiles.srec>
+  <armgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__SAM3X8E__</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x003e</Value>
+      <Value>USBCON</Value>
+      <Value>USB_MANUFACTURER="\"Unknown\""</Value>
+      <Value>USB_PRODUCT="\"Arduino Due\""</Value>
+      <Value>ARDUINO=160</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=84000000L</Value>
+      <Value>printf=iprintf</Value>
+      <Value>__SAM__</Value>
+    </ListValues>
+  </armgcc.compiler.symbols.DefSymbols>
+  <armgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value></Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include/</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/arm_none_eabi/include/</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/arm-none-eabi/include</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/CMSIS/CMSIS/Include/</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/libsam/include</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/libsam</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/CMSIS/Device/ATMEL/</Value>
+      <Value>C:/Users/kotzukaru/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/RTC/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/RTC</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/UIPEthernet/src/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/UIPEthernet/src</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/SdFat/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/SdFat</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/SPI/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/SPI</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/Wire/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/Wire</Value>
+      <Value>../../RemoteSensorManager</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/variants/arduino_due_x</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/cores/arduino</Value>
+    </ListValues>
+  </armgcc.compiler.directories.IncludePaths>
+  <armgcc.compiler.optimization.level>Optimize for size (-Os)</armgcc.compiler.optimization.level>
+  <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
+  <armgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__SAM3X8E__</Value>
+      <Value>USB_VID=0x2341</Value>
+      <Value>USB_PID=0x003e</Value>
+      <Value>USBCON</Value>
+      <Value>USB_MANUFACTURER="\"Unknown\""</Value>
+      <Value>USB_PRODUCT="\"Arduino Due\""</Value>
+      <Value>ARDUINO=160</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=84000000L</Value>
+      <Value>printf=iprintf</Value>
+      <Value>__SAM__</Value>
+    </ListValues>
+  </armgcccpp.compiler.symbols.DefSymbols>
+  <armgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value></Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include/</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/arm_none_eabi/include/</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/arm-none-eabi/include</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/CMSIS/CMSIS/Include/</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/libsam/include</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/libsam</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/CMSIS/Device/ATMEL/</Value>
+      <Value>C:/Users/kotzukaru/Documents/Arduino/libraries</Value>
+      <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/RTC/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/RTC</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/UIPEthernet/src/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/UIPEthernet/src</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/SdFat/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/libraries/SdFat</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/SPI/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/SPI</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/Wire/utility</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/Wire</Value>
+      <Value>../../RemoteSensorManager</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/variants/arduino_due_x</Value>
+      <Value>C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/cores/arduino</Value>
+    </ListValues>
+  </armgcccpp.compiler.directories.IncludePaths>
+  <armgcccpp.compiler.optimization.level>Optimize for size (-Os)</armgcccpp.compiler.optimization.level>
+  <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
+  <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
+  <armgcccpp.linker.optimization.GarbageCollectUnusedSections>True</armgcccpp.linker.optimization.GarbageCollectUnusedSections>
+  <armgcccpp.linker.miscellaneous.LinkerFlags>-Tsam3x8e_flash.ld</armgcccpp.linker.miscellaneous.LinkerFlags>
+  <armgcccpp.preprocessingassembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL\sam3xa\include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\CMSIS\Include</Value>
+      <Value>%24(ToolchainDir)\..\..\CMSIS_Atmel\Device\ATMEL</Value>
+    </ListValues>
+  </armgcccpp.preprocessingassembler.general.IncludePaths>
+</ArmGccCpp>
+    </ToolchainSettings>
+    <VisualMicroSettings>
+      <VisualMicroSettings>
+        <arduino.upload.port>COM13</arduino.upload.port>
+        <arduino.board.name>arduino_due_x_dbg</arduino.board.name>
+        <arduino.board.desc>Arduino Due (Programming Port)</arduino.board.desc>
+        <arduino.board.property_bag>name=Arduino Due (Programming Port)
+vid.0=0x2341
+pid.0=0x003d
+upload.tool=bossac
+upload.protocol=sam-ba
+upload.maximum_size=524288
+upload.use_1200bps_touch=true
+upload.wait_for_upload_port=false
+upload.native_usb=false
+build.mcu=cortex-m3
+build.f_cpu=84000000L
+build.usb_product="Arduino Due"
+build.board=SAM_DUE
+build.core=arduino
+build.extra_flags=-D__SAM3X8E__ -mthumb {build.usb_flags}
+build.ldscript=linker_scripts/gcc/flash.ld
+build.variant=arduino_due_x
+build.variant_system_lib=libsam_sam3x8e_gcc_rel.a
+build.vid=0x2341
+build.pid=0x003e
+runtime.ide.path=C:\ArduinoIDE\arduino-1.6.0
+build.system.path=C:\ArduinoIDE\arduino-1.6.0\hardware\arduino\sam\system
+runtime.ide.version=160
+originalid=arduino_due_x_dbg
+intellisense.tools.path={runtime.ide.path}/hardware/tools/g++_arm_none_eabi
+intellisense.include.paths={build.core.coresparentfolder.vmresolved}\system\CMSIS\Device\ATMEL\;{build.core.coresparentfolder.vmresolved}\system\libsam;{build.core.coresparentfolder.vmresolved}\system\libsam\include;{build.core.coresparentfolder.vmresolved}\system\CMSIS\CMSIS\Include\;{vm.boardsource.path}\system\CMSIS\CMSIS\Include\;{vm.boardsource.path}\system\CMSIS\Device\ATMEL\;{vm.boardsource.path}\system\libsam;{vm.boardsource.path}\system\libsam\include;{intellisense.tools.path}\arm-none-eabi\include;{intellisense.tools.path}\arm_none_eabi\include\;{intellisense.tools.path}\lib\gcc\arm-none-eabi\4.4.1\include;{intellisense.tools.path}\lib\gcc\arm-none-eabi\4.4.1\include\;
+tools.atprogram.cmd.path=%AVRSTUDIO_EXE_PATH%\atbackend\atprogram
+tools.atprogram.cmd.setwinpath=true
+tools.atprogram.program.params.verbose=-v
+tools.atprogram.program.params.quiet=-q
+tools.atprogram.program.pattern="{cmd.path}" -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+tools.atprogram.program.xpattern="{cmd.path}" {AVRSTUDIO_BACKEND_CONNECTION} -d {build.mcu} {program.verbose} {program.extra_params} program -c -f "{build.path}\{build.project_name}.hex"
+version=1.6.0
+compiler.path={runtime.ide.path}/hardware/tools/gcc-arm-none-eabi-4.8.3-2014q1/bin/
+compiler.c.cmd=arm-none-eabi-gcc
+compiler.c.flags=-c -g -Os -w -ffunction-sections -fdata-sections -nostdlib --param max-inline-insns-single=500 -Dprintf=iprintf -MMD
+compiler.c.elf.cmd=arm-none-eabi-gcc
+compiler.c.elf.flags=-Os -Wl,--gc-sections
+compiler.S.flags=-c -g -x assembler-with-cpp
+compiler.cpp.cmd=arm-none-eabi-g++
+compiler.cpp.flags=-c -g -Os -w -ffunction-sections -fdata-sections -nostdlib -fno-threadsafe-statics --param max-inline-insns-single=500 -fno-rtti -fno-exceptions -Dprintf=iprintf -MMD
+compiler.ar.cmd=arm-none-eabi-ar
+compiler.ar.flags=rcs
+compiler.objcopy.cmd=arm-none-eabi-objcopy
+compiler.objcopy.eep.flags=-O ihex -j .eeprom --set-section-flags=.eeprom=alloc,load --no-change-warnings --change-section-lma .eeprom=0
+compiler.elf2hex.flags=-O binary
+compiler.elf2hex.cmd=arm-none-eabi-objcopy
+compiler.ldflags=
+compiler.size.cmd=arm-none-eabi-size
+compiler.define=-DARDUINO=
+compiler.c.extra_flags=
+compiler.c.elf.extra_flags=
+compiler.cpp.extra_flags=
+compiler.ar.extra_flags=
+compiler.elf2hex.extra_flags=
+compiler.libsam.c.flags="-I{build.system.path}/libsam" "-I{build.system.path}/CMSIS/CMSIS/Include/" "-I{build.system.path}/CMSIS/Device/ATMEL/"
+build.usb_flags=-DUSB_VID={build.vid} -DUSB_PID={build.pid} -DUSBCON '-DUSB_MANUFACTURER={build.usb_manufacturer}' '-DUSB_PRODUCT={build.usb_product}'
+build.usb_manufacturer="Unknown"
+recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} -mcpu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.c.extra_flags} {build.extra_flags} {compiler.libsam.c.flags} {includes} "{source_file}" -o "{object_file}"
+recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} -mcpu={build.mcu} -DF_CPU={build.f_cpu} -DARDUINO={runtime.ide.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {compiler.libsam.c.flags} {includes} "{source_file}" -o "{object_file}"
+recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} {compiler.ar.extra_flags} "{build.path}/{archive_file}" "{object_file}"
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} -mcpu={build.mcu} "-T{build.variant.path}/{build.ldscript}" "-Wl,-Map,{build.path}/{build.project_name}.map" {compiler.c.elf.extra_flags} -o "{build.path}/{build.project_name}.elf" "-L{build.path}" -mthumb -Wl,--cref -Wl,--check-sections -Wl,--gc-sections -Wl,--entry=Reset_Handler -Wl,--unresolved-symbols=report-all -Wl,--warn-common -Wl,--warn-section-align -Wl,--warn-unresolved-symbols -Wl,--start-group "{build.path}/syscalls_sam3.c.o" {object_files} "{build.variant.path}/{build.variant_system_lib}" "{build.path}/{archive_file}" -Wl,--end-group -lm -gcc
+recipe.objcopy.eep.pattern=
+recipe.objcopy.hex.pattern="{compiler.path}{compiler.elf2hex.cmd}" {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags} "{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.bin"
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A "{build.path}/{build.project_name}.elf"
+recipe.size.regex=\.text\s+([0-9]+).*
+tools.bossac.cmd=bossac.exe
+tools.bossac.cmd.windows=bossac.exe
+tools.bossac.path={runtime.ide.path}/hardware/tools
+tools.bossac.upload.params.verbose=-i -d
+tools.bossac.upload.params.quiet=
+tools.bossac.upload.pattern="{path}/{cmd}" {upload.verbose} --port={serial.port.file} -U {upload.native_usb} -e -w -v -b "{build.path}/{build.project_name}.bin" -R
+vm.platform.root.path=C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino16x
+ide.hint=Arduino 1.6 Ide
+ide.location.key=Arduino16x
+ide.location.ide.winreg=Arduino 1.6.x Application
+ide.location.sketchbook.winreg=Arduino 1.6.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.location.preferences=%VM_APPDATA_ROAMING%\arduino15\preferences.txt
+ide.location.preferences_fallback=%VM_APPDATA_ROAMING%\arduino\preferences.txt
+ide.default.version=160
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=arduino.h
+ide.platformswithoutpackage=false
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionGTEQ=160
+ide.exe=arduino.exe
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+vm.debug=true
+software=ARDUINO
+ssh.user.name=root
+ssh.user.default.password=arduino
+ssh.host.wwwfiles.path=/www/sd
+build.working_directory={runtime.ide.path}
+ide.appid=arduino16x
+location.sketchbook=C:\Users\kotzukaru\Documents\Arduino
+vm.core.include=arduino.h
+vm.boardsource.path=C:\ArduinoIDE\arduino-1.6.0\hardware\arduino\sam
+runtime.platform.path=C:\ArduinoIDE\arduino-1.6.0\hardware\arduino\sam
+vm.platformname.name=sam
+build.arch=SAM
+</arduino.board.property_bag>
+        <arduino.build.mcu>cortex-m3</arduino.build.mcu>
+        <arduino.build.f_cpu>84000000L</arduino.build.f_cpu>
+        <arduino.build.core>arduino</arduino.build.core>
+        <arduino.upload.protocol>sam-ba</arduino.upload.protocol>
+        <arduino.upload.maximum_size>524288</arduino.upload.maximum_size>
+        <visualmicro.application.name>arduino16x</visualmicro.application.name>
+        <visualmicro.package.name>arduino</visualmicro.package.name>
+        <visualmicro.platform.name>sam</visualmicro.platform.name>
+      </VisualMicroSettings>
+    </VisualMicroSettings>
+    <VMSETTING_IncludePaths>C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/cores/arduino;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/variants/arduino_due_x;../../RemoteSensorManager;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/libraries/Wire;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/libraries/Wire/utility;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/libraries/SPI;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/libraries/SPI/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/SdFat;C:/ArduinoIDE/arduino-1.5.8/libraries/SdFat/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/UIPEthernet/src;C:/ArduinoIDE/arduino-1.5.8/libraries/UIPEthernet/src/utility;C:/ArduinoIDE/arduino-1.5.8/libraries/RTC;C:/ArduinoIDE/arduino-1.5.8/libraries/RTC/utility;C:/ArduinoIDE/arduino-1.5.8/libraries;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/kotzukaru/Documents/Arduino/libraries;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/system/CMSIS/Device/ATMEL/;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/system/libsam;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/system/libsam/include;C:/ArduinoIDE/arduino-1.5.8/hardware/arduino/sam/system/CMSIS/CMSIS/Include/;C:/ArduinoIDE/arduino-1.5.8/hardware/tools/g++_arm_none_eabi/arm-none-eabi/include;C:/ArduinoIDE/arduino-1.5.8/hardware/tools/g++_arm_none_eabi/arm_none_eabi/include/;C:/ArduinoIDE/arduino-1.5.8/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include;C:/ArduinoIDE/arduino-1.5.8/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include/;;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/cores/arduino;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/variants/leonardo;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/Wire;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/Wire/utility;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/SPI;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries/SPI/utility;C:/ArduinoIDE/arduino-1.6.0/libraries/SdFat;C:/ArduinoIDE/arduino-1.6.0/libraries/SdFat/utility;C:/ArduinoIDE/arduino-1.6.0/libraries/UIPEthernet/src;C:/ArduinoIDE/arduino-1.6.0/libraries/UIPEthernet/src/utility;C:/ArduinoIDE/arduino-1.6.0/libraries/RTC;C:/ArduinoIDE/arduino-1.6.0/libraries/RTC/utility;C:/ArduinoIDE/arduino-1.6.0/libraries;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/avr/libraries;c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/include/;c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/include/avr/;c:/arduinoide/arduino-1.6.0/hardware/tools/avr/avr/;c:/arduinoide/arduino-1.6.0/hardware/tools/avr/lib/gcc/avr/4.8.1/include/;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/cores/arduino;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/variants/arduino_due_x;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/Wire;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/Wire/utility;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/SPI;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries/SPI/utility;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/libraries;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/CMSIS/Device/ATMEL/;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/libsam;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/libsam/include;C:/ArduinoIDE/arduino-1.6.0/hardware/arduino/sam/system/CMSIS/CMSIS/Include/;C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/arm-none-eabi/include;C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/arm_none_eabi/include/;C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include;C:/ArduinoIDE/arduino-1.6.0/hardware/tools/g++_arm_none_eabi/lib/gcc/arm-none-eabi/4.4.1/include/;</VMSETTING_IncludePaths>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BTSensorManager.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BTSensorManager.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RemoteSensorManager.ino">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Visual Micro\.RemoteSensorManager.vsarduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Visual Micro\" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

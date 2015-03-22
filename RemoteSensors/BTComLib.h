@@ -28,64 +28,44 @@
 #define BLCD 106
 #define BERR 100
 
+#define HIGHVAL "HIGHVAL"
+#define LOWVAL "LOWVAL"
+
 #define RX 8
 #define TX 9
 #define OWP 3
-#define SERIALSPEED 4800
+#define SERIALSPEED 9600
 
 int const BUFSIZE = 40;
 
 class BTRemoteSensors
 {
  protected:
-	char * processRequest(char *  command);
 
  public:
 	BTRemoteSensors();
 	BTRemoteSensors(uint8_t Rx, uint8_t Tx, uint8_t OneWPin);
-	BTRemoteSensors(uint8_t Rx, uint8_t Tx, uint8_t OneWPin, int serialSpeed);
+	BTRemoteSensors(uint8_t Rx, uint8_t Tx, uint8_t OneWPin, long serialSpeed);
 	void begin();
 	void loop();
 	bool conected();
+	float getTemperature();
+	SoftwareSerial  *_btSerial;
+	char * processRequest(char *  command);
+	bool getDigital(int pin);
+	int getAnalog(int pin);
 	
  private:
 	OneWire* _oneWire;
 	DallasTemperature* _sensors;
-	SoftwareSerial* _btSerial;
 	uint8_t _Rx; 
 	uint8_t _Tx;
 	uint8_t _OneWPin;
-	int _serialSpeed;
+	long _serialSpeed;
 	int _index = 0;
 	char command[BUFSIZE];
-};
-
-
-class BTSensorsManager
-{
-	protected:
-	char * processRequest(char *  command);
-
-	public:
-	BTSensorsManager();
-	BTSensorsManager(uint8_t Rx, uint8_t Tx);
-	BTSensorsManager(uint8_t Rx, uint8_t Tx, int serialSpeed);
-	int readDigital(uint8_t pin);
-	int writeDigital(uint8_t pin, int val);
-	int readAnalog(uint8_t pin);
-	int writeAnalog(uint8_t pin, int val);
-	float readTemp();
-	void begin();
-	bool conected();
-char* getResponse();
-	
-	private:
-	SoftwareSerial* _btSerial;
-	uint8_t _Rx;
-	uint8_t _Tx;
-	int _serialSpeed;
-	int _index = 0;
-	char command[BUFSIZE];
+	bool digitalData[13];
+	int analogData[6];
 };
 
 #endif

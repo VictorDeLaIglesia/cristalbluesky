@@ -23,6 +23,7 @@ extern "C" void __cxa_pure_virtual() {;}
 
 void error_P(const char* str);
 //
+char* getData(char * datafield);
 //
 
 #include "C:\ArduinoIDE\arduino-1.6.0\hardware\arduino\sam\variants\arduino_due_x\pins_arduino.h" 

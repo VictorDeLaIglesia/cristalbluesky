@@ -8,9 +8,9 @@ uint8_t SS_SDReader = 4;
 byte mac[] = {
 0x90,0xA2,0xDA,0x00,0x26,0xEB};
 byte ip[] = {
-192,168,1,5};
-char rootFileName[] = "index.html";  //root file name is what the homepage will be.
-EthernetServer server(80);
+192,168,1,55};
+char rootFileName[] = "index.htx";  //root file name is what the homepage will be.
+EthernetServer server(8080);
 
 Sd2Card card;  //SD Stuff
 SdVolume volume;
@@ -31,12 +31,12 @@ void error_P(const char* str) {  //Error function
 }
 
 void setup() {  //setup stuff
-	Serial.begin(256000);
+	Serial.begin(115200);
 	PgmPrint("Free RAM: ");
 	Serial.println(FreeRam());
 	pinMode(10, OUTPUT);
 	digitalWrite(10, HIGH);
-	if (!card.init(SPI_FULL_SPEED, SS_SDReader)) error("card.init failed!");  //If you are having errors when reading from the SD card, change FULL to HALF
+	if (!card.init(SPI_DIV3_SPEED, SS_SDReader)) error("card.init failed!");  //If you are having errors when reading from the SD card, change FULL to HALF
 	if (!volume.init(&card)) error("vol.init failed!");
 	PgmPrint("Volume is FAT");
 	Serial.println(volume.fatType(),DEC);
@@ -52,14 +52,44 @@ void setup() {  //setup stuff
 	Ethernet.begin(mac, ip);
 	server.begin();
 }
-#define BUFSIZ 100  //defines the buffer size.  100 gives plenty of room.  reduce size if more ram is needed.
+#define BUFSIZ 100  
+
+char* getData(char * datafield)
+{
+	char *data = (char *) malloc(sizeof(char));
+	strcpy(data, "");
+	if (strstr(datafield, "temp") != 0)
+		return "23,67";
+	else if (strstr(datafield, "humidity") != 0)
+		strcat(data, "96");
+	else if (strstr(datafield, "light") != 0)
+		strcat(data, "on");
+	else if (strstr(datafield, "wind") != 0)
+		strcat(data, "off");
+	else if (strstr(datafield, "hour") != 0)
+		strcat(data, "23:67");
+	else if (strstr(datafield, "starthour") != 0)
+		strcat(data, "06:00");
+	else if (strstr(datafield, "endhour") != 0)
+		strcat(data, "22:00");
+	else strcat(data, "");
+	char c2[1];
+	c2[0] = '\0';
+	strcat(data,  c2);
+	
+	Serial.print(data);
+	return data;
+}
 
 void loop()
 {
 	char clientline[BUFSIZ];
 	char *command;
 	char *filename;
+	char datafield[20];
 	int index = 0;
+	bool process = false;
+	bool processing = false;
 	EthernetClient client = server.available();
 	if (client) {
 		boolean current_line_is_blank = true;
@@ -82,10 +112,11 @@ void loop()
 				}
 				if (strstr(clientline, "GET /") != 0) {
 					if (!filename) filename = clientline + 5;  //gets rid of the GET / in the filename
-					if (strcasestr(filename, "?"))  {
+					if (strstr(filename, "?") != 0)  {
 						command = (strstr(clientline, "?"))+1;
 						(strstr(clientline, "?"))[0] = 0;
 						(strstr(command, " HTTP"))[0] = 0; //gets rid of everything from HTTP to the end.
+						Serial.println(command);
 					} else {
 						(strstr(clientline, " HTTP"))[0] = 0;  //gets rid of everything from HTTP to the end.
 					}
@@ -94,15 +125,17 @@ void loop()
 						client.println("HTTP/1.1 404 Not Found");
 						client.println("Content-Type: text/html");
 						client.println();
-						client.println("<h2>File Not Found!</h2>");
+						client.println("<h2>File Not Found. Better luck next time.!</h2>");
 						break;
 					}
 					Serial.println("Opened!");
 					client.println("HTTP/1.1 200 OK");
 					if (strstr(filename, ".htm") != 0)  //Sets content type.
 					client.println("Content-Type: text/html");
-					else if (strstr(filename, ".html") != 0)
-					client.println("Content-Type: text/html");
+					else if (strstr(filename, ".htx") != 0){
+						process = true;
+						client.println("Content-Type: text/html");
+					}
 					else if (strstr(filename, ".css") != 0)
 					client.println("Content-Type: text/css");
 					else if (strstr(filename, ".png") != 0)
@@ -123,21 +156,45 @@ void loop()
 					client.println("Content-Type: text");
 					client.println();
 					int16_t c;
+					processing = false;
 					while ((c = file.read()) >= 0) {
-						client.write((char)c);  //sends file to website client
+						if ((process) && ((char)c == '@') && (!processing))  {
+							processing = true;
+							strcpy(datafield,  "");
+						}else if ((process) && (processing)) {
+							if ((char)c == '@') {
+								char *ret;
+								ret = getData(datafield);
+								client.write(ret);
+								Serial.print(ret);
+								processing = false;
+							}
+							else {
+								char c2[2];
+								c2[0] = c;
+								c2[1] = '\0';
+								strcat(datafield,  c2);
+							}
+						}else {
+							client.write((char)c);
+							Serial.write((char)c);
+						}
 					}
 					file.close();
+					process=false;
 				}
 				else {
 					client.println("HTTP/1.1 404 Not Found");
 					client.println("Content-Type: text/html");
 					client.println();
-					client.println("<h2>File Not Found!</h2>");
+					client.println("<h2>File Not Found. Better luck next time.!!</h2>");
 				}
 				break;
 			}
 		}
-		delay(1);
+		delay(100);
 		client.stop();
+		FreeRam();
+		file.close();
 	}
 }

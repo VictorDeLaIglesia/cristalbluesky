@@ -16,7 +16,7 @@ BTRemoteSensors::BTRemoteSensors(uint8_t Rx, uint8_t Tx, uint8_t OneWPin)
 	_serialSpeed = SERIALSPEED;
 }
 
-BTRemoteSensors::BTRemoteSensors(uint8_t Rx, uint8_t Tx, uint8_t OneWPin, int serialSpeed)
+BTRemoteSensors::BTRemoteSensors(uint8_t Rx, uint8_t Tx, uint8_t OneWPin, long serialSpeed)
 {
 	_Rx = Rx;
 	_Tx = Tx;
@@ -32,14 +32,9 @@ void BTRemoteSensors::begin()
 	_sensors = new DallasTemperature(_oneWire);
 	_sensors->begin();
 	this->_btSerial = new SoftwareSerial(_Rx, _Tx);
-	while (!conected()) 
-	{
-		// bucle until bt is conected
-		delay(200);
-	} 
-	if (conected()) {
-		_btSerial->begin(_serialSpeed);
-	} 
+    this->_btSerial->begin(_serialSpeed);
+	processRequest("2 13 1");
+	processRequest("2 12 1");
 }
 
 char * BTRemoteSensors::processRequest(char *  command)
@@ -50,84 +45,106 @@ char * BTRemoteSensors::processRequest(char *  command)
 	command = &command[1];
 	int icode = atoi(code);
 	int value = 0;
+	double fake = 0 ;
 	switch (icode){
 		case RDD:
-		icode = atoi(command);
-		_btSerial->print(BRDD);
-		_btSerial->print(" ");
-		_btSerial->print(icode);
-		_btSerial->print(" ");
-		_btSerial->print(digitalRead(icode));
-		_btSerial->println();
-		break;
+			icode = atoi(command);
+			_btSerial->print(BRDD);
+			_btSerial->print(" ");
+			_btSerial->print(icode);
+			_btSerial->print(" ");
+			_btSerial->print(digitalRead(icode));
+			_btSerial->println();
+			break;
 		case WRD:
-		code = command;
-		command = strstr(command, " ");
-		command[0]=0;
-		command = &command[1];
-		icode = atoi(code);
-		_btSerial->print(BWRD);
-		_btSerial->print(" ");
-		_btSerial->print(icode);
-		_btSerial->print(" ");
-		value = atoi(command);
-		_btSerial->print(value);
-		_btSerial->print(" ");
-		pinMode(icode, OUTPUT);
-		digitalWrite(icode, value);
-		_btSerial->print(digitalRead(icode));
-		_btSerial->println();
-		break;
+			code = command;
+			command = strstr(command, " ");
+			command[0]=0;
+			command = &command[1];
+			icode = atoi(code);
+			if (strstr(command, HIGHVAL) != 0) {
+				_btSerial->print(BWRD);
+				_btSerial->print(" ");
+				_btSerial->print(icode);
+				_btSerial->print(" ");
+				_btSerial->print(HIGHVAL);
+				_btSerial->print(" ");
+				if (digitalData[icode] != HIGH) {
+					digitalData[icode] = HIGH;
+					digitalWrite(icode, HIGH);
+				}
+			}
+			if (strstr(command, LOWVAL) != 0) {
+				_btSerial->print(BWRD);
+				_btSerial->print(" ");
+				_btSerial->print(icode);
+				_btSerial->print(" ");
+				_btSerial->print(LOW);
+				_btSerial->print(" ");
+				if (digitalData[icode] != LOW) {
+					digitalData[icode] = LOW;
+					digitalWrite(icode, LOW);
+				}
+			}
+			_btSerial->println();
+			break;
 		case RDA:
-		icode = atoi(command);
-		_btSerial->print(BRDA);
-		_btSerial->print(" ");
-		_btSerial->print(icode);
-		_btSerial->print(" ");
-		_btSerial->print(analogRead(icode));
-		_btSerial->println();
-		break;
+			icode = atoi(command);
+			_btSerial->print(BRDA);
+			_btSerial->print(" ");
+			_btSerial->print(icode);
+			_btSerial->print(" ");
+			_btSerial->print(analogRead(icode));
+			_btSerial->println();
+			break;
 		case WRA:
-		code = command;
-		command = strstr(command, " ");
-		command[0]=0;
-		command = &command[1];
-		icode = atoi(code);
-		_btSerial->print(BWRA);
-		_btSerial->print(" ");
-		_btSerial->print(icode);
-		_btSerial->print(" ");
-		value = atoi(command);
-		_btSerial->print(value);
-		_btSerial->print(" ");
-		analogWrite(icode, value);
-		_btSerial->print(analogRead(icode));
-		_btSerial->println();
-		break;
+			code = command;
+			command = strstr(command, " ");
+			command[0]=0;
+			command = &command[1];
+			icode = atoi(code);
+			_btSerial->print(BWRA);
+			_btSerial->print(" ");
+			_btSerial->print(icode);
+			_btSerial->print(" ");
+			value = atoi(command);
+			_btSerial->print(value);
+			_btSerial->print(" ");
+			analogWrite(icode, value);
+			_btSerial->print(value);
+			_btSerial->println();
+			break;
 		case TEM:
-		_btSerial->print(BTEM);
-		_btSerial->print(" ");
-		_sensors->requestTemperatures();
-		_btSerial->print(_sensors->getTempCByIndex(0));
-		_btSerial->println();
-		uint8_t* deviceAddress2;
-		const uint8_t deviceAddress[8] = {0xFA, 0xFA, 0xFA, 0xFA, 0xFA, 0xFA, 0xFA, 0xFA};
-		_sensors->getAddress(deviceAddress2, 0);
-		for (int i=0; i<8 ; i++) {
-			_btSerial->print(deviceAddress2[i]);
-		}
-		break;
+			_btSerial->print(BTEM);
+			_btSerial->print(" ");
+			_sensors->requestTemperatures();
+			_btSerial->print(_sensors->getTempCByIndex(0));
+			_btSerial->println();
+			break;
 		case LCD:
-		_btSerial->print(BLCD);
-		_btSerial->print(" ");
-		_btSerial->println();
-		break;
+			_btSerial->print(BLCD);
+			_btSerial->print(" ");
+			_btSerial->println();
+			break;
 		default:
-		_btSerial->print(BERR);
-		_btSerial->println();
-		
+			_btSerial->print(BERR);
+			_btSerial->println();
+			break;
 	}
 	return command;
+}
+
+float BTRemoteSensors::getTemperature() {
+	_sensors->requestTemperatures();
+	return _sensors->getTempCByIndex(0);
+}
+
+bool BTRemoteSensors::getDigital(int pin) {
+	return digitalData[pin];
+}
+
+int BTRemoteSensors::getAnalog(int pin) {
+	return analogData[pin];
 }
 
 void BTRemoteSensors::loop()
@@ -153,105 +170,3 @@ bool BTRemoteSensors::conected()
 	return TRUE;
 }
 
-// Sensors manager class
-
-BTSensorsManager::BTSensorsManager()
-{
-	_Rx = RX;
-	_Tx = TX;
-	_serialSpeed = SERIALSPEED;
-}
-
-BTSensorsManager::BTSensorsManager(uint8_t Rx, uint8_t Tx)
-{
-	_Rx = Rx;
-	_Tx = Tx;
-	_serialSpeed = SERIALSPEED;
-}
-
-BTSensorsManager::BTSensorsManager(uint8_t Rx, uint8_t Tx, int serialSpeed)
-{
-	_Rx = Rx;
-	_Tx = Tx;
-	_serialSpeed = serialSpeed;
-}
-
-void BTSensorsManager::begin()
-{
-	this->_btSerial = new SoftwareSerial(_Rx, _Tx);
-	_btSerial->begin(_serialSpeed);
-}
-
-bool BTSensorsManager::conected()
-{
-	return TRUE;
-}
-
-int BTSensorsManager::readDigital(uint8_t pin)
-{
-	if (conected()) 
-	{
-		_btSerial->print(RDD);
-		_btSerial->print(" ");
-		_btSerial->print(pin);
-		_btSerial->println();
-		char* command = getResponse();
-	}
-}
-
-int BTSensorsManager::writeDigital(uint8_t pin, int val)
-{
-	if (conected())
-	{
-		_btSerial->print(WRD);
-		_btSerial->print(" ");
-		_btSerial->print(pin);
-		_btSerial->print(" ");
-		_btSerial->print(val);
-		_btSerial->println();
-		char* command = getResponse();
-		
-	}
-}
-
-int BTSensorsManager::readAnalog(uint8_t pin)
-{
-	if (conected())
-	{
-		_btSerial->print(RDA);
-		_btSerial->print(" ");
-		_btSerial->print(pin);
-		_btSerial->println();
-		char* command = getResponse();
-		
-	}
-}
-
-int BTSensorsManager::writeAnalog(uint8_t pin, int val)
-{
-	if (conected())
-	{
-		_btSerial->print(WRA);
-		_btSerial->print(" ");
-		_btSerial->print(pin);
-		_btSerial->print(" ");
-		_btSerial->print(val);
-		_btSerial->println();
-		char* command = getResponse();
-	}
-}
-
-float BTSensorsManager::readTemp()
-{
-	if (conected())
-	{
-		_btSerial->print(TEM);
-		_btSerial->println();
-		char* command = getResponse();
-	}
-}
-
-char* BTSensorsManager::getResponse()
-{
-	return "hol";
-}
