@@ -281,9 +281,26 @@ void processCommand(char * command)
 		}
 		else if (strstr(command, "hour"))
 		{
+			params[2] = '\0';
+			uint8_t chour = atoi(params);
+			params = &params[5];
+			params[7] = '\0';
+			uint8_t cminute = atoi(params);
+			dsclock.fillByHMS(chour, cminute, 0);
+			dsclock.setTime();
 		}
 		else if (strstr(command, "date"))
 		{
+			params[4] = '\0';
+			uint8_t cyear = atoi(params);
+			params = &params[5];
+			params[2] = '\0';
+			uint8_t cmonth = atoi(params);
+			params = &params[3];
+			params[2] = '\0';
+			uint8_t cday = atoi(params);
+			dsclock.fillByYMD(cyear, cmonth, cday);
+			dsclock.setTime();
 		}
 	}
 }
@@ -323,7 +340,6 @@ void loop()
 				}
 			}
 		}
-		/*
 		char clientline[BUFSIZ];
 		char *command;
 		char *filename;
@@ -436,7 +452,7 @@ void loop()
 		}
 		file.close();
 		server.begin();
-		*/
+		
 		// Update ThingSpeak
 		if (cliente.available())
 		{
